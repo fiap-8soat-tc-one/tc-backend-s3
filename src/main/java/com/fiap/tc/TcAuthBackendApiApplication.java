@@ -13,11 +13,11 @@ import java.awt.image.BufferedImage;
 
 @SpringBootApplication
 @EnableConfigurationProperties(OriginApiProperty.class)
-public class TcBackendApiApplication {
+public class TcAuthBackendApiApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(TcBackendApiApplication.class, args);
+        SpringApplication.run(TcAuthBackendApiApplication.class, args);
     }
 
     @Bean
