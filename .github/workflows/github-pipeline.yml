@@ -54,10 +54,9 @@ jobs:
         run: |
           docker push  ${{ secrets.DOCKER_USERNAME }}/fiap-8soat-tc-s4-backoffice:backend-${{ env.TAG }}
           docker push  ${{ secrets.DOCKER_USERNAME }}/fiap-8soat-tc-s4-backoffice:latest
-
       - name: Commit revision tag
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git tag release-${{ env.TAG }}
-          git push origin release-${{ env.TAG }}
+          git tag -f release-${{ env.TAG }}
+          git push -f origin release-${{ env.TAG }}
